@@ -1,4 +1,4 @@
-![AssemblyJS](/app/img/assemblyjs_logo_horizontal.jpg "AssemblyJS")
+![AssemblyJS](/app/img/assemblyjs_logo_horizontal.png "AssemblyJS")
 
 AssemblyJS-example1
 ===================
