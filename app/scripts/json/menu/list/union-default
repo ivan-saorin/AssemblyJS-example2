@@ -1,0 +1,63 @@
+{
+    "link": {
+        "rel": "self",
+        "href": "/sitemanager/rest/sitemanager/menu/union/default",
+        "title": "menus",
+        "contentType": "application/vnd.sitemanager.menu+json"
+    },
+    "items": [
+        {
+            "link": {
+                "target": "main",
+                "rel": "hyperlink",
+                "href": "#/main",
+                "title": "Main",
+                "contentType": "application/vnd.sitemanager.menu+json",
+                "id": 5
+            },
+            "menuId": 5,
+            "items": [
+                {
+                    "link": {
+                        "id": 19,
+                        "parentId": 5,
+                        "rel": "hyperlink homepage",
+                        "href": "#/",
+                        "title": "Home",
+                        "menuId": 13
+                    }
+                },
+                {
+                    "link": {
+                        "id": 12,
+                        "parentId": 5,
+                        "rel": "hyperlink",
+                        "href": "#/no-way",
+                        "title": "No Way",
+                        "menuId": 12
+                    }
+                },
+                {
+                    "link": {
+                        "id": 11,
+                        "parentId": 5,
+                        "rel": "hyperlink",
+                        "href": "#/ractiveExample",
+                        "title": "Ractive Example",
+                        "menuId": 11
+                    }
+                },
+                {
+                    "link": {
+                        "id": 10,
+                        "parentId": 5,
+                        "rel": "hyperlink",
+                        "href": "#/jqueryExample",
+                        "title": "jQuery Example",
+                        "menuId": 10
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<!--[if IE 8]>            <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>            <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->    <html class="no-js" > <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Union Manager Libraries</title>
+    <meta name="keywords" content="sitemanager libraries" />
+    <meta name="description" content="Stub project used to generate pre-minified libraries file to be included in dependent projects">
+    <meta name="author" content="UniCredit S.p.A. - GCIO - Ivan Saorin">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fav icons -->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <script src="scripts/xdomain/xhook.min.js" data-build="exclude"></script>
+    <script src="scripts/xdomain/xdomain.min.js" slave="http://wildfly8-saorin.rhcloud.com:80/sitemanager/public/proxy.html" data-build="exclude"></script>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <style type="text/css">
+			input { border: 1px solid #aaaaaa; padding: 5px; margin: 5px;}
+	</style>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/curl/dist/curl/curl.js"></script>
+    <script src="scripts/splash.js"></script>
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="splash fade-in">
+      <h1 class="splash-title fade-in">UNION DEMO</h1>
+      <h3 class="splash-title fade-in">Uninstalled</h3>
+      <a href="#" class="splash-arrow fade-in"><img src="img/down-arrow.png" alt="" /></a>
+    </div> <!-- END .splash -->
+    <div class="container" style="opacity: 0">
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Union Ractive Test</a>
+          </div>
+          <div class="navbar-collapse collapse">
+              <div id="navbar-content"></div>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </div>
+
+      <div id="page-content">
+
+
+        <div id="controlPanel">
+          <button id="starthello">start hello</button>
+          <button id="stophello">stop hello</button>
+          <button id="starthola">start hola</button>
+          <button id="stophola">stop hola</button>
+        </div>
+
+      </div>
+
+    </div> <!-- /container -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script-->
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/app.js"></script>
+    <!--script src="scripts/modularapp.js"></script-->
+    <!-- inject:partials -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>
