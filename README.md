@@ -1,3 +1,5 @@
+![AssemblyJS](/app/img/assemblyjs_logo_horizontal.jpg "AssemblyJS")
+
 AssemblyJS-example1
 ===================
 
