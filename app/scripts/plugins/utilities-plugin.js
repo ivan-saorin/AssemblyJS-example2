@@ -166,7 +166,7 @@ define(function( ) {
 
 
     /**
-     * @name angular.isElement
+     * @name isElement
      * @kind function
      *
      * @description

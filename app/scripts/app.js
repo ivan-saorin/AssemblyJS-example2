@@ -23,7 +23,6 @@
 
       var plugins = [
         {id: 'jquery', type: 'plugin', source: 'scripts/plugins/jquery-plugin.js'},
-        {id: 'Class', type: 'plugin', source: 'scripts/plugins/inheritance-plugin.js'},
         {id: 'logger', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/console-logger-plugin.js'},
         {id: 'utils', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/utilities-plugin.js'},
         {id: 'restRequest', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/rest-request.js'},
