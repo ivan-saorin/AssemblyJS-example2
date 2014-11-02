@@ -83,6 +83,8 @@ define(function(  ) {
 
       self.router.on('hashchange', hashchange);
 
+      self.router.anchor.set('/');
+
     }
 
     function _stop() {
