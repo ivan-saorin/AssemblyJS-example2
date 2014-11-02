@@ -1,3 +1,6 @@
+/*!
+ * based on code in: https://github.com/mehdishojaei/mediator
+*/
 define(['bower_components/assemblyjs/dist/promises.js'], function( Promises ) {
 
 	var _isArray = function (obj) {
