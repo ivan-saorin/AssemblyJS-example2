@@ -5,11 +5,26 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var saveLicense = require('uglify-save-license');
 var rev = require('gulp-rev');
+var wrapAMD = require('gulp-wrap-amd');
 //var ngAnnotate = require('gulp-ng-annotate');
 
 gulp.task('vendor', function () {
   return gulp.src(['app/vendor/**/*.*'])
     .pipe(gulp.dest('dist/vendor'))
+    .pipe($.size());
+});
+
+gulp.task('riot-tag', function () {
+  return gulp.src('app/scripts/**/*.tag')
+    .pipe($.riot())
+    .pipe(wrapAMD({
+      deps: ['bower_components/riotjs/riot.min.js'],          // dependency array
+      params: ['riot'],        // params for callback
+      exports: 'this'         // variable to return
+      //moduleRoot: 'templates/', // include a module name in the define() call, relative to moduleRoot
+      //modulePrefix: 'rocks/'  // optional, prefix of the module name. It depends on existance of `moduleRoot`
+    }))
+    .pipe(gulp.dest('app/scripts'))
     .pipe($.size());
 });
 
@@ -108,4 +123,4 @@ gulp.task('clean', function () {
   return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['vendor', 'html', 'partials', 'images', 'fonts']);
+gulp.task('build', ['vendor', 'riot-tag', 'html', 'partials', 'images', 'fonts']);

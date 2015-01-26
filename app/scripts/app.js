@@ -12,7 +12,8 @@
   updateSplash('Uninstalled');
 
   console.log('app.js init', assembly);
-  curl(['bower_components/assemblyjs/dist/assembly.js'])
+  //curl(['bower_components/assemblyjs/dist/assembly.js'])
+  curl(['bower_components/assemblyjs/lib/scripts/assembly.js'])
     .then(function(assembly) {
       console.log('app.js [' + assembly.state() + ']');
 
@@ -29,18 +30,20 @@
         {id: 'rest', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/rest.js'},
         {id: 'sumService', type: 'plugin', source: 'scripts/plugins/sum-plugin.js'},
         {id: 'ractive', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/ractive-plugin.js'},
+        {id: 'riot', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/riotjs-plugin.js'},
         {id: 'grapnel', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/grapnel-plugin.js'},
         {id: 'mediator', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/mediator-plugin.js'},
         {id: 'restConfig', type: 'plugin', exportToSandbox: true, source: 'scripts/plugins/rest-cfg-plugin.js'},
       ];
 
       var modules = [
-        {id: 'menu', type: 'module', source: 'scripts/modules/MenuModule.js'},
+        {id: 'menu', type: 'module', source: 'scripts/modules/RiotMenuModule.js'},
         {id: 'router', type: 'module', source: 'scripts/modules/RouterModule.js', config: {
             routes: {
               '/': assembly.noop,
               '/no-way': assembly.noop,
               '/ractiveExample': assembly.noop,
+              '/riotExample': assembly.noop,
               '/jqueryExample' : assembly.noop,
             }
           }
@@ -50,11 +53,13 @@
               '/': null,
               '/no-way': 'example3',
               '/ractiveExample': 'ractiveExample',
+              '/riotExample': 'riotExample',
               '/jqueryExample': 'jqueryExample'
             }
           }
         },
         {id: 'ractiveExample', type: 'module', source: 'scripts/modules/Example1Module.js', autostart: false},
+        {id: 'riotExample', type: 'module', source: 'scripts/modules/RiotModule.js', autostart: false},
         {id: 'jqueryExample', type: 'module', source: 'scripts/modules/Example2Module.js', autostart: false},
         {id: 'example3', type: 'module', source: 'scripts/modules/Example3Module.js', autostart: false}
       ];
@@ -119,5 +124,7 @@
           console.error(reason);
         });
 
-    });
+    },function(reason) {
+          console.error(reason);
+        });
 

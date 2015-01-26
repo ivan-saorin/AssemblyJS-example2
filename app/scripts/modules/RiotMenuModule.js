@@ -1,4 +1,4 @@
-define(['text!partials/ractive/modules/menu.tpl'], function( menuTemplate ) {
+define(['scripts/modules/RiotMenu.js', 'scripts/modules/RiotMenuItem.js'], function( menujs, menuitemjs ) {
 
   function apply(list) {
     list.hasItems = (list.items && list.items.length > 0);
@@ -34,7 +34,7 @@ define(['text!partials/ractive/modules/menu.tpl'], function( menuTemplate ) {
 
       var restConfig = sandbox.restConfig;
 
-      var Ractive = sandbox.ractive;
+      var riot = sandbox.riot;
 
       var Utils = sandbox.utils;
 
@@ -55,15 +55,12 @@ define(['text!partials/ractive/modules/menu.tpl'], function( menuTemplate ) {
         .then(function (result) {
           logger.warn('menu.search --->', result);
 
-          var ractive = new Ractive({
-              el: '#navbar-content',
-              template: menuTemplate,
-            data: result
+          $('#navbar-content').html('<menu></menu>');
+
+          riot.mount('menu', {
+            menu: result
           });
-
         });
-
-
 
     }
 

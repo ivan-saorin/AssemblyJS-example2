@@ -24,7 +24,7 @@
                         "rel": "hyperlink homepage",
                         "href": "#/",
                         "title": "Home",
-                        "menuId": 13
+                        "menuId": 19
                     }
                 },
                 {
@@ -45,6 +45,16 @@
                         "href": "#/ractiveExample",
                         "title": "Ractive Example",
                         "menuId": 11
+                    }
+                },
+                {
+                    "link": {
+                        "id": 13,
+                        "parentId": 5,
+                        "rel": "hyperlink",
+                        "href": "#/riotExample",
+                        "title": "Riot Example",
+                        "menuId": 13
                     }
                 },
                 {

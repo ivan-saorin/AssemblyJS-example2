@@ -24,7 +24,7 @@ define(['bower_components/assemblyjs/dist/promises.js'], function( Promises ) {
     apiMocks: {
       schema: 'http',
       host: 'localhost',
-      port: '3001',
+      port: '3000',
       contexts: ['scripts', 'json', '{serviceId}', '{operationId}'],
       urlParamsSeparator: '-',
       services: {

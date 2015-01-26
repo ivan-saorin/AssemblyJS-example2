@@ -26,6 +26,7 @@
     "gulp-size": "^0.3.0",
     "gulp-uglify": "^0.2.1",
     "gulp-useref": "^0.6.0",
+    "gulp-riot": "^0.1.2",
     "http-proxy": "~1.1.4",
     "jshint-stylish": "^0.1.5",
     "karma-jasmine": "^0.1.5",
@@ -39,5 +40,11 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.1",
+    "gulp-wrap-amd": "^0.4.1",
+    "riot": "^2.0.2",
+    "through2": "^0.6.3"
   }
 }
