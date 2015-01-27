@@ -55,7 +55,19 @@
                         "href": "#/riotExample",
                         "title": "Riot Example",
                         "menuId": 13
-                    }
+                    },
+                    "items": [
+                      {
+                          "link": {
+                              "id": 22,
+                              "parentId": 5,
+                              "rel": "hyperlink",
+                              "href": "#/no-way2",
+                              "title": "No Way2",
+                              "menuId": 22
+                          }
+                      }
+                    ]
                 },
                 {
                     "link": {
